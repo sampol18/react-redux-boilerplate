@@ -15,5 +15,5 @@ This boilerplate was made by [@sampol18](https://twitter.com/sampol18)
 
 1. `yarn install`
 2. To start:
-  1. In Development: `yarn start:dev`
-  2. In Production: `yarn start`
+  * In Development: `yarn start:dev`
+  * In Production: `yarn start`
