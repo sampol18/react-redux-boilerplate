@@ -50,11 +50,34 @@ module.exports = {
           'url-loader',
         ]
       },
+      {
+        test: /\.(png|jpg|gif)$/,
+        loader: 'url-loader'
+      },
+      {
+        test: /\.(woff|woff2)$/,
+        loader: "url-loader?limit=10000&mimetype=application/font-woff"
+      },
+      {
+        test: /\.ttf$/,
+        loader: "url-loader?limit=10000&mimetype=application/octet-stream"
+      },
+      {
+        test: /\.eot$/,
+        loader: "file-loader"
+      },
+      {
+        test: /\.svg$/,
+        loader: "url-loader?limit=10000&mimetype=image/svg+xml"
+      },
     ],
   },
   resolve: {
     extensions: ['.js', '.jsx'],
     modules:  ['node_modules'],
+    alias: {
+      'bootstrap': path.join(nodeModulesPath, 'bootstrap/dist/css/')
+    }
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
